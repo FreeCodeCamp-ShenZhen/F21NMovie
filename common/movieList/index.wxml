@@ -1,0 +1,14 @@
+<!--pages/common/movieList/index.wxml-->
+<template name="u-mList">
+  <scroll-view class="u-mList" scroll-y="true" bindscrolltolower="_scrollBottom"
+                     lower-threshold="0" scroll-top='{{top}}'>
+    <view class='u-mItem' wx:for="{{mList}}" wx:key="{{index}}" data-id="{{item.id}}">
+       <image src='{{item.images.medium}}' lazy-load='true' class='u-mImg' mode='aspectFit'></image>
+        <view class='u-mContent'>
+          <view class='u-mTittle'>{{item.title}}</view>
+          <view class='u-mRating'>评分：{{item.rating.average}}</view>
+        </view>
+    </view>
+    <view class='u-mloading' wx:if="{{loadBar}}"> <image src='/img/oval.svg' class='u-mloadImg'></image><view class='u-mloadText'>正在加载中</view> </view>
+  </scroll-view>
+</template>

@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+  <import src="/zanui/loadmore/index.wxml" />
+  <import src="/zanui/tab/index.wxml" />
+  <import src="/common/movieList/index.wxml" />
+  <template is="zan-tab" data="{{tab: tab, componentId: 'tab'}}" />
+  <template is="zan-loadmore" data="{{loading}}" />
+  <template is="u-mList" data="{{mList,loadBar,top}}" />
+</view>

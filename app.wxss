@@ -1,0 +1,9 @@
+/**app.wxss**/
+@import './common/movieList/index.wxss';
+@import './zanui/index.wxss';
+@import './common/movieList/index.wxss';
+
+page,
+.container {
+  height: 100%;
+} 
