@@ -22,19 +22,20 @@
   font-size: 30rpx;
   line-height: 40rpx;
   margin-bottom: 10rpx;
+  text-indent: 5rpx;
+  
 }
  .u-mTittle{
    margin-top: 10rpx; 
    vertical-align: middle;
-   text-indent: 10rpx;
    overflow: hidden;
    white-space: nowrap;
    text-overflow: ellipsis;
  }
  .u-mRating{
     font-size: 24rpx;
-    line-height: 30rpx;    
-    text-align: right;
+    line-height: 30rpx;
+    
     color: #ee4e45;
  }
  .u-mloading{
