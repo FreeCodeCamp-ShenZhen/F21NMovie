@@ -2,7 +2,7 @@
 <template name="u-mList">
   <scroll-view class="u-mList" scroll-y="true" bindscrolltolower="_scrollBottom"
                      lower-threshold="0" scroll-top='{{top}}'>
-    <view class='u-mItem' wx:for="{{mList}}" wx:key="{{index}}" data-id="{{item.id}}">
+    <view class='u-mItem' wx:for="{{mList}}" wx:key="{{index}}" data-id="{{item.id}}" bindtap='_goMovieDetail'>
        <image src='{{item.images.medium}}' lazy-load='true' class='u-mImg' mode='aspectFit'></image>
         <view class='u-mContent'>
           <view class='u-mTittle'>{{item.title}}</view>

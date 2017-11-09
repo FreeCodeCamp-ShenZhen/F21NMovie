@@ -1,7 +1,11 @@
 /**app.wxss**/
+@import './icons/iconfont.wxss';
+
 @import './common/movieList/index.wxss';
+@import './common/bottom/index.wxss';
 @import './zanui/index.wxss';
 @import './common/movieList/index.wxss';
+
 
 page,
 .container {

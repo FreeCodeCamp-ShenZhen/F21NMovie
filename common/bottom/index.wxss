@@ -1,0 +1,30 @@
+/* common/bottom/index.wxss */
+.u-bottom{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: space-around;
+  background: black;
+  color: white;
+}
+.u-nav{
+  margin: 8rpx 0;
+  text-align: center;
+}
+
+.u-nav.active{
+  color: #4db37b;
+}
+.icon{
+  font-size: 50rpx;
+  line-height: 50rpx;
+  height: 50rpx;
+  font-weight: bold;
+  margin: 5rpx;
+}
+.icon-name{
+  font-size: 18rpx;
+}

@@ -1,0 +1,15 @@
+<template name="u-bottom">
+  <view class='u-bottom'>
+    <view class='u-nav {{active === item.icon ? "active" : ""}}' 
+              wx:for="{{navs}}" 
+              bindtap='_activeBottom'
+              data-id='{{item.icon}}'
+              wx:key='{{index}}'>
+        <view  class="icon iconfont icon-{{item.icon}}">
+        </view>
+        <view class='icon-name'>
+          {{item.name}}
+        </view>
+    </view>
+  </view>
+</template>

@@ -2,12 +2,24 @@
 //获取应用实例
 var Zan = require('../../zanui/index');
 import movieList from '../../common/movieList/index';
+import Bottom from '../../common/bottom/index';
 
 console.log(movieList)
 const app = getApp()
 
-Page(Object.assign({}, Zan.Tab, movieList, {
+Page(Object.assign({}, Zan.Tab, movieList, Bottom,{
   data: {
+    navs: [{
+      icon: 'libra',
+      name: '排行'
+    }, {
+      icon: 'home',
+      name: '首页'
+    }, {
+        icon: 'favorite',
+        name: '收藏'
+      },],
+    active: 'home',
     loading: true,
     tab: {
       scroll: true,
@@ -25,7 +37,8 @@ Page(Object.assign({}, Zan.Tab, movieList, {
           title: 'Top250'
         }
       ],
-      selectedId: 'in_theaters'
+      selectedId: 'in_theaters',
+      popup: false
     },
     mList: [],
     count:9,
@@ -113,6 +126,22 @@ Page(Object.assign({}, Zan.Tab, movieList, {
         mList: mList,
         isRequest: false
       })
+    })
+  },
+  activeBottom(e){
+    this.setData({
+      active: e.id
+    })
+  },
+  goMovieDetail(e){
+    this.togglePopup();
+    app.dbMovieRequest(`/subject/${e}`).then(res=>{
+      console.log(res);
+    })
+  },
+  togglePopup(){
+    this.setData({
+      popup: !this.data.popup
     })
   }
 }))

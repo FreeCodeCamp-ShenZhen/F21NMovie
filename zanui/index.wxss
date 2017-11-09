@@ -20,3 +20,7 @@
 @import "tab/index.wxss";
 @import "toast/index.wxss";
 @import "toptips/index.wxss";
+
+.blur{
+  filter: blur(10px);
+}
