@@ -1,9 +1,35 @@
 {
   "pages": [
-    "pages/favorite/index",
     "pages/libra/index",
+    "pages/favorite/index",
     "pages/type/index"
   ],
+  "tabBar": {
+    "color": "#fff",
+    "selectedColor": "#4db37b",
+    "backgroundColor": "black",
+    "list": [
+      {
+        "pagePath": "pages/libra/index",
+        "text": "排行",
+        "iconPath": "img/libra_0.png",
+        "selectedIconPath": "img/libra.png"
+      },
+      {
+        "pagePath": "pages/type/index",
+        "text": "分类",
+        "iconPath": "img/home_0.png",
+        "selectedIconPath": "img/home.png"
+      },
+      {
+        "pagePath": "pages/favorite/index",
+        "text": "收藏",
+        "iconPath": "img/favorite_0.png",
+        "selectedIconPath": "img/favorite.png"
+      }
+    ],
+    "position": "bottom"
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

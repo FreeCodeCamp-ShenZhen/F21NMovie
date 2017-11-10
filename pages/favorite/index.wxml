@@ -4,6 +4,6 @@
 <import src="/common/popup/index.wxml" />
 <view class="container {{ popup ? 'blur' : '' }}">
   <template is="u-mList" data="{{mList:movieList,loadBar,top,popup}}"/>
-  <template is="u-bottom" data="{{navs,active}}" />
+  <!-- <template is="u-bottom" data="{{navs,active}}" /> -->
 </view>
 <template is="u-popup" data="{{movie,popup}}" />

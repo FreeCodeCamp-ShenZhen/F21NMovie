@@ -30,7 +30,7 @@ Page(Object.assign({}, movieList, Bottom, Popup,{
       active: e.id
     })
     console.log(e.id)
-    wx.navigateTo({
+    wx.switchTab({
       url: `../${e.id}/index`
     })
   },

@@ -8,6 +8,6 @@
   <template is="zan-tab" data="{{tab: tab, componentId: 'tab'}}" />
   <template is="zan-loadmore" data="{{loading}}" />
   <template is="u-mList" data="{{mList,loadBar,top,popup}}"/>
-  <template is="u-bottom" data="{{navs,active}}" />
+  <!-- <template is="u-bottom" data="{{navs,active}}" /> -->
 </view>
 <template is="u-popup" data="{{movie,popup}}" />
