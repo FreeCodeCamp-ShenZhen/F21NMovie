@@ -14,13 +14,13 @@ Page(Object.assign({}, Zan.Tab, movieList, Bottom, Popup,{
       icon: 'libra',
       name: '排行'
     }, {
-      icon: 'home',
-      name: '首页'
+        icon: 'type',
+      name: '分类'
     }, {
         icon: 'favorite',
         name: '收藏'
       },],
-    active: 'home',
+    active: 'libra',
     loading: true,
     tab: {
       scroll: true,
@@ -134,6 +134,10 @@ Page(Object.assign({}, Zan.Tab, movieList, Bottom, Popup,{
     this.setData({
       active: e.id
     })
+    console.log(e.id)
+    wx.navigateTo({
+      url: `../${e.id}/index`
+    })
   },
   goMovieDetail(e){
     const movieList = this.data.movieList.filter((val,index)=>{
@@ -182,5 +186,21 @@ Page(Object.assign({}, Zan.Tab, movieList, Bottom, Popup,{
       movie: movie,
       movieList: movieList
     })
+  },
+  onHide(){
+    wx.setStorage({
+      key: "Old",
+      data: this.data.movieList
+    })
+    
+  },
+  onShow(){
+    const movieList = wx.getStorageSync('Old') || [];
+    console.log(movieList);
+    this.setData({
+      movieList: movieList,
+      active: "libra"      
+    })
   }
+
 }))

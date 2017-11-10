@@ -49,7 +49,7 @@
 }
 .movie-favorite{
   position: absolute;
-  bottom: 20rpx;
+  bottom: -10rpx;
   right: 20rpx;
   color: #ee4e45;
   font-size: 34rpx;  

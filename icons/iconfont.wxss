@@ -17,7 +17,7 @@
 
 .icon-favorite:before { content: "\e6a0"; }
 
-.icon-home:before { content: "\e6d7"; }
+.icon-type:before { content: "\e6d7"; }
 
 .icon-favoritesfilling:before { content: "\e730"; }
 

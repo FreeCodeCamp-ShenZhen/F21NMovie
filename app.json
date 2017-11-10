@@ -1,6 +1,8 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/favorite/index",
+    "pages/libra/index",
+    "pages/type/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
