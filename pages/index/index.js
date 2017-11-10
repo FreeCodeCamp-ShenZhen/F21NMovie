@@ -3,11 +3,12 @@
 var Zan = require('../../zanui/index');
 import movieList from '../../common/movieList/index';
 import Bottom from '../../common/bottom/index';
+import Popup from '../../common/popup/index';
 
 console.log(movieList)
 const app = getApp()
 
-Page(Object.assign({}, Zan.Tab, movieList, Bottom,{
+Page(Object.assign({}, Zan.Tab, movieList, Bottom, Popup,{
   data: {
     navs: [{
       icon: 'libra',
@@ -40,6 +41,7 @@ Page(Object.assign({}, Zan.Tab, movieList, Bottom,{
       selectedId: 'in_theaters',
     },
     mList: [],
+    movieList: [],
     count:9,
     saveCount: 9,
     start: 0,
@@ -134,17 +136,51 @@ Page(Object.assign({}, Zan.Tab, movieList, Bottom,{
     })
   },
   goMovieDetail(e){
+    const movieList = this.data.movieList.filter((val,index)=>{
+      if( e === val.id){
+        this.setData({
+          movieIndex: index
+        })
+        console.log(index);
+        return val;
+      } 
+    })
+
+    if(movieList.length > 0){
+      this.togglePopup();       
+      this.setData({
+        movie: movieList[0]
+      })
+      return false;
+    }
+    this.data.movieLis
     app.dbMovieRequest(`/subject/${e}`).then(res=>{
       console.log(res);
-      this.togglePopup();      
+      this.togglePopup(); 
+      const movieList = this.data.movieList;
+      movieList.push(res)
       this.setData({
-        movie: res
+        movie: res,
+        movieList: movieList,
+        movieIndex: this.data.movieList.length - 1
       })
     })
   },
   togglePopup(){
     this.setData({
       popup: !this.data.popup
+    })
+  },
+  favorite(){
+
+    let movie = this.data.movie;
+    let movieList = this.data.movieList;
+    movie.favorite = !movie.favorite;
+    movieList[this.data.movieIndex].favorite = movie.favorite;
+
+    this.setData({
+      movie: movie,
+      movieList: movieList
     })
   }
 }))

@@ -13,7 +13,7 @@
   float: right;
   line-height: 40rpx;  
   font-size:28rpx;
-  color:red;
+  color: #ee4e45;
 }
 .movie-image{
   width: 40%;
@@ -21,6 +21,7 @@
 }
 .movie-content{
   display: inline-block;
+  position: relative;
   vertical-align: top;
   width: calc(60% - 40rpx);  
   padding: 0 20rpx;
@@ -31,6 +32,7 @@
   margin: 20rpx 0;
 }
 
+.movie-favorite,
 .movie-directors,
 .movie-genres,
 .movie-type,
@@ -41,8 +43,20 @@
   margin-top: 10rpx;
   color: #333;
 }
+
 .movie-type{
     font-size: 26rpx;
+}
+.movie-favorite{
+  position: absolute;
+  bottom: 20rpx;
+  right: 20rpx;
+  color: #ee4e45;
+  font-size: 34rpx;  
+}
+
+.movie-favorite-text{
+  padding-left: 10rpx;
 }
 
 .movie-summary-box{

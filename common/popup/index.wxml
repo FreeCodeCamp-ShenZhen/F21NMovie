@@ -24,6 +24,11 @@
         <view class='movie-acts'>
           主演:<view style='display:inline;' wx:for="{{movie.casts}}" wx:key="{{index}}"> {{item.name}}</view>   
         </view> 
+        <view class='movie-favorite' catchtap='_favorite'>
+          <view class='iconfont icon-favorite {{movie.favorite ? "icon-favoritesfilling" : ""}}' 
+                    style='display:inline-block;'></view>
+          <view style='display:inline-block;' class='movie-favorite-text'>收藏</view>
+        </view> 
       </view>
     </view>
     <view class='movie-summary-box'>
