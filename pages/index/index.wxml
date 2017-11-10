@@ -1,12 +1,13 @@
 <!--index.wxml-->
+<import src="/zanui/loadmore/index.wxml" />
+<import src="/zanui/tab/index.wxml" />
+<import src="/common/movieList/index.wxml" />
+<import src="/common/bottom/index.wxml" />
+<import src="/common/popup/index.wxml" />
 <view class="container {{ popup ? 'blur' : '' }}">
-  <import src="/zanui/loadmore/index.wxml" />
-  <import src="/zanui/tab/index.wxml" />
-  <import src="/common/movieList/index.wxml" />
-  <import src="/common/bottom/index.wxml" />
   <template is="zan-tab" data="{{tab: tab, componentId: 'tab'}}" />
   <template is="zan-loadmore" data="{{loading}}" />
   <template is="u-mList" data="{{mList,loadBar,top,popup}}"/>
   <template is="u-bottom" data="{{navs,active}}" />
 </view>
-<view class='zan-popup zan-popup--left {{popup ? "zan-popup--show" : ""}}' bindtap='togglePopup'></view>
+<template is="u-popup" data="{{movie,popup}}" />

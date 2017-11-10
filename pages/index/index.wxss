@@ -1,7 +1,4 @@
 /**index.wxss**/
-.container{
-  transition: filter .4s linear .1s;
-}
 
 .zan-tab{
   position: fixed;
@@ -30,3 +27,4 @@
 .zan-loadmore{
   z-index: 9999;
 }
+

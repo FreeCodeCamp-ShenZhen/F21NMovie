@@ -23,4 +23,6 @@
 
 .blur{
   filter: blur(10px);
+  transition: filter .2s linear .1s;
+
 }

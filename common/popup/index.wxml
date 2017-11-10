@@ -1,0 +1,36 @@
+<template name="u-popup">
+  <view class='zan-popup zan-popup--left {{popup ? "zan-popup--show" : ""}}' bindtap='togglePopup'>
+    <view class='movie-header'>
+      <image src='{{movie.images.large}}' mode="aspectFill" class='movie-image'></image>
+      <view class='movie-content'>
+        <view class='movie-title'>
+          {{movie.title}}
+          <view class="movie-rating">评分:{{movie.rating.average || "暂无"}}</view>   
+        </view>
+        <view class='movie-type'>
+          片长:<view style='display:inline;'> {{movie.durations || "暂无"}}</view>   
+          语言:<view style='display:inline;'> {{movie.languages || "中文"}}</view>   
+          年代:<view style='display:inline;'> {{movie.year || "暂无"}}</view>   
+        </view> 
+        <view class='movie-directors'>
+          导演:<view style='display:inline;' wx:for="{{movie.directors}}" wx:key="{{index}}"> {{item.name}}</view> 
+        </view> 
+        <view class='movie-genres'>
+          类型:<view style='display:inline;' wx:for="{{movie.genres}}" wx:key="{{index}}"> {{item}}</view>   
+        </view> 
+        <view class='movie-countries'>
+          国家:<view style='display:inline;' wx:for="{{movie.countries}}" wx:key="{{index}}"> {{item}}</view>   
+        </view> 
+        <view class='movie-acts'>
+          主演:<view style='display:inline;' wx:for="{{movie.casts}}" wx:key="{{index}}"> {{item.name}}</view>   
+        </view> 
+      </view>
+    </view>
+    <view class='movie-summary-box'>
+      <view class="movie-title">简介</view>
+      <scroll-view class='movie-summary' scroll-y="true">
+        {{movie.summary}}
+      </scroll-view>
+    </view>
+  </view>
+</template>

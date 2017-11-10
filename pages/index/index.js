@@ -38,7 +38,6 @@ Page(Object.assign({}, Zan.Tab, movieList, Bottom,{
         }
       ],
       selectedId: 'in_theaters',
-      popup: false
     },
     mList: [],
     count:9,
@@ -46,7 +45,8 @@ Page(Object.assign({}, Zan.Tab, movieList, Bottom,{
     start: 0,
     total: 0,
     loadBar: false,
-    top: 0
+    top: 0,
+    popup: false    
   },
   onLoad: function () {
     app.dbMovieRequest(`in_theaters?count=${this.data.count}&start=${this.data.start}`).then((res)=>{
@@ -134,9 +134,12 @@ Page(Object.assign({}, Zan.Tab, movieList, Bottom,{
     })
   },
   goMovieDetail(e){
-    this.togglePopup();
     app.dbMovieRequest(`/subject/${e}`).then(res=>{
       console.log(res);
+      this.togglePopup();      
+      this.setData({
+        movie: res
+      })
     })
   },
   togglePopup(){

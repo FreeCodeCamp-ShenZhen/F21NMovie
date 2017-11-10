@@ -6,7 +6,6 @@ const movieList = {
       this.goMovieDetail(id);
     }else{
       console.warn('页面缺少 goMovieDetail 回调函数');
-
     }
   },
   _scrollBottom(e){

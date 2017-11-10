@@ -1,0 +1,54 @@
+/* common/popup/index.wxss */
+
+.movie-header{
+  height: 35%;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #ccc;
+}
+.movie-title{
+  font-size:36rpx;
+  line-height: 40rpx;
+}
+.movie-rating{
+  float: right;
+  line-height: 40rpx;  
+  font-size:28rpx;
+  color:red;
+}
+.movie-image{
+  width: 40%;
+  height: 100%;
+}
+.movie-content{
+  display: inline-block;
+  vertical-align: top;
+  width: calc(60% - 40rpx);  
+  padding: 0 20rpx;
+  height: 100%;
+}
+
+.movie-title{
+  margin: 20rpx 0;
+}
+
+.movie-directors,
+.movie-genres,
+.movie-type,
+.movie-countries,
+.movie-acts,
+.movie-summary{
+  font-size: 28rpx;
+  margin-top: 10rpx;
+  color: #333;
+}
+.movie-type{
+    font-size: 26rpx;
+}
+
+.movie-summary-box{
+  padding: 30rpx 20rpx;
+}
+.movie-summary{
+  color: #333;
+  height: 500rpx;
+}
