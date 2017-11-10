@@ -192,14 +192,17 @@ Page(Object.assign({}, Zan.Tab, movieList, Bottom, Popup,{
       key: "Old",
       data: this.data.movieList
     })
-    
+    this.setData({
+      popup: false
+    })
   },
   onShow(){
     const movieList = wx.getStorageSync('Old') || [];
     console.log(movieList);
     this.setData({
       movieList: movieList,
-      active: "libra"      
+      top: 0,
+      popup: false
     })
   }
 

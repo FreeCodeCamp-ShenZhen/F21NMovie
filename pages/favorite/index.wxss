@@ -1,6 +1,6 @@
 /* pages/love/index.wxss */
 
 .u-mList{
-  height: calc(100% - 100rpx -20px);
+  height: calc(100% - 20px);
   margin-top: 20px;
 }

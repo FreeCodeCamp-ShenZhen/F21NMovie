@@ -81,13 +81,18 @@ Page(Object.assign({}, movieList, Bottom, Popup,{
     });
     this.setData({
       movieList: movieList,
-      active: 'favorite'
+      top: 0,
+      popup: false
     })
   },
   onHide: function () {
     wx.setStorage({
       key: "Old",
       data: this.data.movieList
+    })
+
+    this.setData({
+      popup: false
     })
   }
 }))
